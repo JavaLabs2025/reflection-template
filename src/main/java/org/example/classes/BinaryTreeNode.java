@@ -1,6 +1,10 @@
 package org.example.classes;
 
+import org.example.generator.Generatable;
+
+@Generatable
 public class BinaryTreeNode {
+
     private Integer data;
     private BinaryTreeNode left;
     private BinaryTreeNode right;
