@@ -3,12 +3,8 @@ package org.example.generator;
 import java.lang.reflect.Type;
 import java.util.Random;
 
-/**
- * То, что генератор типа получает от {@link Generator}: случайность, глубину и способ сгенерировать вложенное значение.
- */
 public final class GenerationContext {
 
-    /** Глубже этого уровня пользовательские объекты не создаются: так обрываются рекурсивные структуры. */
     public static final int MAX_DEPTH = 5;
     public static final int MAX_SIZE = 5;
 
@@ -34,7 +30,6 @@ public final class GenerationContext {
         return depth > MAX_DEPTH;
     }
 
-    /** Размер массива или коллекции: от 1 до {@link #MAX_SIZE}. */
     public int nextSize() {
         return random.nextInt(1, MAX_SIZE + 1);
     }
