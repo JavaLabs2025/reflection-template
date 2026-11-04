@@ -1,14 +1,19 @@
 package org.example.classes;
 
+import org.example.generator.Generatable;
+
+@Generatable
 public class Example {
     int i;
+    double d;
 
-    public Example(int i) {
+    public Example(int i,  double d) {
         this.i = i;
+        this.d = d;
     }
 
     @Override
     public String toString() {
-        return "Example(" + i + ")";
+        return "Example(" + i + " " + d + ")" ;
     }
 }

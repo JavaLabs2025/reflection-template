@@ -1,10 +1,15 @@
 package org.example.classes;
 
+import org.example.generator.Generatable;
+import org.example.generator.Range;
+
+@Generatable
 public class Product {
     private String name;
     private double price;
 
-    public Product(String name, double price) {
+    @Generatable
+    public Product(String name, @Range(min = 0.01, max = 10000) double price) {
         this.name = name;
         this.price = price;
     }
